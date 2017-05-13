@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h2>Collections</h2>
+
+  <ul>
+  {% for collection in collections %}
+    <li>Collection here</li>
+  {% endfor %}
+    <li>
+      <a href="{% url 'new_collection' %}">Add Collection<p>+</p></a>
+    </li>
+  </ul>
+{% endblock %}
