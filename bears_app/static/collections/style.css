@@ -6,6 +6,10 @@ body > header {
   font-size: 7rem;
 }
 
+.header--login {
+  float: right;
+}
+
 a {
   text-decoration: none;
 }
