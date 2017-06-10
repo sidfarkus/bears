@@ -9,6 +9,11 @@
   <header>
   🐻 Bears
   </header>
+  <div class="header--login">
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'login' %}">Sign up</a>
+    <a href="{% url 'logout' %}">Logout</a>
+  </div>
   
   {% block content %}
   {% endblock %}

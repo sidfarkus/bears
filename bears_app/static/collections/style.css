@@ -2,6 +2,10 @@ body {
   font-family: 'EB Garamond', serif;
 }
 
+body > header {
+  font-size: 7rem;
+}
+
 a {
   text-decoration: none;
 }
