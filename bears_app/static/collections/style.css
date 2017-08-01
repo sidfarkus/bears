@@ -1,0 +1,66 @@
+/* Base styles ------------------ */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: navy;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  width: 130px;
+  height: 240px;
+  background: #DDD;
+  text-align: center;
+  box-shadow: 2px 2px 10px #444;
+  vertical-align: middle;
+  line-height: 240px;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:hover {
+  color: blue;
+}
+
+a:active {
+  color: teal;
+}
+
+a:visited {
+  color: orange;
+}
+
+/* Main styles ------------------ */
+
+body > header {
+  background-color: lightslategray;
+  font-family: 'Indie Flower', cursive;
+  font-size: 7rem;
+  text-align: center;
+}
+
+.header--login {
+  background-color: silver;
+  text-align: right;
+}
+
+.header--login a {
+  padding: 7px;
+}
+
+li:last-child {
+  font-weight: bold;
+}
+
+li:last-child p {
+  position: relative;
+  display: block;
+  margin: -160% 0 0 0;
+  font-size: 3em;
+}
