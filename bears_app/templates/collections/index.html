@@ -5,7 +5,13 @@
 
   <ul>
   {% for collection in collections %}
-    <li>{{ collection.name }}</li>
+    <li>
+      <p>
+      {{ collection.name }}
+      Owner:
+      {{ collection.user.username }}
+      </p>
+    </li>
   {% endfor %}
     <li>
       <a href="{% url 'new_collection' %}">Add Collection<p>+</p></a>
