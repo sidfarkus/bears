@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <h2>{{ collection.name }}</h2>
+
+  <ul>
+    {% for song in collection.song_set.all %}
+    <li>
+      <strong>{{ song.title }}</strong>
+      <p>{{ song.artist }}</p>
+      <p>{{ song.album }}</p>
+      <p>{{ song.composer }}</p>
+      <p>{{ song.duration }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <form method="POST" action="{% url 'add_song' id=collection.id %}">
+    <label>
+      Title:
+      <input type="text" name="title"></input>
+    </label>
+    <label>
+      Album:
+      <input type="text" name="album"></input>
+    </label>
+    <label>
+      Artist:
+      <input type="text" name="artist"></input>
+    </label>
+    <label>
+      Composer:
+      <input type="text" name="composer"></input>
+    </label>
+    <label>
+      Duration:
+      <input type="text" name="duration"></input>
+    </label>
+    <input type="submit" value="Submit"></input>
+    {% csrf_token %}
+  </form>
+{% endblock %}

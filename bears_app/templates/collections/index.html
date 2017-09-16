@@ -7,7 +7,7 @@
   {% for collection in collections %}
     <li>
       <p>
-      {{ collection.name }}
+      <a href="{% url 'show_collection' id=collection.id %}">{{ collection.name }}</a>
       Owner:
       {{ collection.user.username }}
       </p>
